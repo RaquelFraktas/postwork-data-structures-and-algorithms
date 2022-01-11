@@ -1,14 +1,10 @@
 function findFirstDuplicate(arr) {
-  let uniques = new Set()
-  for (const element of arr) {
-    if (uniques.has(element)) {
-      return element;
-    }
-
-    uniques.add(element);
+  for( i= 0; i < arr.length; i++){
+    if(arr[i]===arr[i+1]){
+      return arr[i]
+    } 
   }
-
-  return -1;
+  return -1
 }
 
 if (require.main === module) {
@@ -30,3 +26,7 @@ module.exports = findFirstDuplicate;
 //   find that num at it's iteration at find function
 //    else nothing matches, return -1
 // And a written explanation of your solution
+//  We iterated because its a logical way to check each value in the array.
+// We used i+1 to compare one place to the right of i equally.
+// if there was a comparision, then we would return the value of i and break the iteration (thru returning it)
+//  if nothing was passed through the conditional thru all the loops, we returned -1
