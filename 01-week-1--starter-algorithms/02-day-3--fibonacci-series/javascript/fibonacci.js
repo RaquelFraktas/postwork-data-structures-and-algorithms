@@ -1,15 +1,41 @@
 function fibonacci(num) {
   if (num < 2){
     return num
+    // the edge case if the value is less than 2
+    // prevents us from running unecessary code/iterations
   } else {
     let inputAry= [0,1]
+    // starts out the fibonacci sequence, it is known
     for(let i=1; i < num; i++){
       let fibForm = inputAry[i] + inputAry[i-1]
+      // formula to get the numbers from the fibonacci sequence. we add the 2 preceeding numbers in the array
       inputAry.push(fibForm)
+      // we add the new fib number onto the array for storage
     } 
     return inputAry[num]
   }
 }
+
+//   /(\
+//   ¡ !´\
+//   | )\ `.
+//   | `.)  \,-,--
+//   (      / /
+//    `'-.,;_/
+//           `----
+
+// function fibonacci(num) {
+//   if (num < 2){
+//     return num
+//   } else {
+//       let inputAry= [0,1]
+//       for(let i= 0; i < num-1 ; i++){
+//         let theSum = inputAry[0] + inputAry[1]
+//         inputAry= [inputAry[1], theSum]
+//       }
+//       return inputAry[1]
+//   }
+// }
 
 if (require.main === module) {
   // add your own tests in here
