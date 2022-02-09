@@ -38,4 +38,22 @@ module.exports = findShortestString;
 //sort function
 //loop through the array
 //find the element with the lowest value 
-//
+
+
+//first return the element in the array if the array length is 1 or 0
+//then use the sort function for the lengths
+//return the first element in that sorted array
+  // let shortest = arr[0];
+  // arr.forEach(string => {
+  //   if (string.length < shortest.length) {
+  //     shortest = string;
+  //   }
+  // });
+
+  //for this solution=>
+  //create a variable that starts at the first element of the array
+  //loop through the array
+  //check to see if the element that we're at in the loop is shorter or longer than the variable we declared
+  //if its not, continue in the loop
+  //if it is, reset the variable to equal that length
+  //return that variable
