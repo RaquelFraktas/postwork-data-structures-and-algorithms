@@ -1,5 +1,7 @@
 def recursive_count(num = 0)
-  # type your code in here
+  return if num >= 10
+  puts num
+  recursive_count(num + 1)
 end
 
 if __FILE__ == $PROGRAM_NAME
@@ -13,3 +15,4 @@ end
 # add a base case for the number being equal or less than 9 to return
 # log out the number
 # recurisvely call the added number
+
